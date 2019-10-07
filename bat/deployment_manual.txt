@@ -1,0 +1,6 @@
+1. install nodejs, npm and foreverjs
+2. install unzipped browser plugin
+3. adapt path to "Client_Software" folder in startup.bat
+4. move server to autostart
+4a. Windows R -> shell:startup
+4b. copy Startup.bat into the folder

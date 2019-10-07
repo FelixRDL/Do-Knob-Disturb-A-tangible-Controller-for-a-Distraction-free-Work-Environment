@@ -1,0 +1,33 @@
+{
+  "name": "Knob Study - Controller and Recorder",
+  "version": "1.0",
+  "description": "Controls distraction blocking software, as well as records current browser usage",
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "management",
+    "<all_urls>"],
+  "manifest_version": 2,
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "sockets": {
+    "tcp": {
+      "connect": "*"
+    },
+    "tcpServer": {
+      "listen": "*"
+    }
+},
+  "content_scripts": [
+    {
+      "matches": [
+            "http://*/*",
+            "https://*/*"],
+      "run_at": "document_end",
+      "js": ["content.js"]
+    }
+  ]
+}
